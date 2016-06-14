@@ -1,7 +1,7 @@
 # array-tree-table
 使用二维数组实现的并且可用于排序的表格(Table), 支持json的序列化和反序列化
 
-参考Table定义:(Table源码)[https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/Table.java]
+参考Table定义:[Table源码](https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/Table.java)
 
 ## 实现目标
 1. 查找 按行,按列,快速定位(guava中的table实现不能满足此要求)
