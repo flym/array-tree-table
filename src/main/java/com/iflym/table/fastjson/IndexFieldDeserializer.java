@@ -39,8 +39,8 @@ public class IndexFieldDeserializer extends DefaultFieldDeserializer {
         Object value = fieldValueDeserilizer.deserialze(parser, fieldInfo.fieldType, fieldInfo.name);
         if(parser.getResolveStatus() == DefaultJSONParser.NeedToResolve) {
             DefaultJSONParser.ResolveTask task = parser.getLastResolveTask();
-            task.setFieldDeserializer(this);
-            task.setOwnerContext(parser.getContext());
+            task.fieldDeserializer = this;
+            task.ownerContext = (parser.getContext());
             parser.setResolveStatus(DefaultJSONParser.NONE);
         } else {
             setValue(object, value);
